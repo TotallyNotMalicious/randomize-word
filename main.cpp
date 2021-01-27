@@ -7,16 +7,16 @@ using namespace std;
 
 string randomize(const string &input)
 {
-	vector<size_t> indexes;
+    vector<size_t> indexes;
 
-	for (size_t i = 0; i < input.size(); i++)
-		indexes.push_back(i);
+    for (size_t i = 0; i < input.size(); i++)
+	indexes.push_back(i);
         random_shuffle(indexes.begin(), indexes.end());
-	    string final;
+	string final;
 
-	for (size_t i = 0; i < indexes.size(); i++)
-		final += input[indexes[i]];
-	    return final;
+    for (size_t i = 0; i < indexes.size(); i++)
+        final += input[indexes[i]];
+	return final;
 }
 
 int main()
@@ -26,7 +26,7 @@ int main()
 
     cout << "Input: ";
     cin >> input;
-	cout << "Randomized: " << randomize(input) << "\n";
+    cout << "Randomized: " << randomize(input) << "\n";
 
-	return 0;
+    return 0;
 }
